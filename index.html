@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreetStyle - Clothing Brand</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+   <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Street<span>Style</span></h1>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="cart">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.vectorstock.com/i/500p/17/08/happy-durga-puja-festival-celebration-promotion-vector-58891708.jpg" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-block">
+   
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://static.vecteezy.com/system/resources/previews/008/174/590/non_2x/fashion-advertising-web-banner-illustration-vector.jpg" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-caption d-none d-md-block">
+     
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/gallery-and-gallery-men-clothing-banner-template-n6a070249c995f.webp" class="d-block w-100" alt="Slide 3">
+      <div class="carousel-caption d-none d-md-block">
+    
+      </div>
+    </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+ <!-- Shop Section -->
+<section id="shop">
+  <h2>Our Collection</h2>
+  <div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('men')">Men</button>
+    <button onclick="filterProducts('women')">Women</button>
+    <button onclick="filterProducts('accessories')">Accessories</button>
+  </div>
+
+  <div class="product-grid" id="product-list">
+    <!-- Example Product Cards -->
+    <div class="card" data-category="men">
+      <img src="https://media.istockphoto.com/id/1195166190/photo/male-model-in-a-blue-suit-casual-outfit.webp?a=1&b=1&s=612x612&w=0&k=20&c=-omEh0o_BkskNrezEawXFfxzr8eb4T9MEsOdaJCwcWk=" alt="Men Jacket">
+      <h3>Classic Men's Jacket</h3>
+      <p>$79.99</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="women">
+      <img src="https://media.istockphoto.com/id/1284839442/photo/street-style-shoot-woman-on-pink-wall-swag-girl-wearing-jeans-jacket-grey-dress-sunglass.webp?a=1&b=1&s=612x612&w=0&k=20&c=J_xnK005WyWynsvM1jEgDtobGHhgrLHUTyVczxzVwO4=" alt="Women Dress">
+      <h3>Elegant Dress</h3>
+      <p>$89.99</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="accessories">
+      <img src="https://media.istockphoto.com/id/701249440/photo/black-backpack-isolated-on-a-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZAM3mxMajFPVUIaM2J4TzLtA1O2PaKlblNq4ikEyN2o=" alt="Backpack">
+      <h3>Urban Backpack</h3>
+      <p>$49.99</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="men">
+      <img src="https://media.istockphoto.com/id/1126884662/photo/fashionable-sneakers-isolated-on-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=rzlT3CW4bor4A1Jv5m4Y4qi5BHB88_nlSiiRQ_2HhCM=" alt="Sneakers">
+      <h3>Street Sneakers</h3>
+      <p>$59.99</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>StreetStyle blends comfort, style, and sustainability. We believe fashion should be bold yet eco-conscious, empowering everyone to express themselves.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 StreetStyle | Follow us on 
+      <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
